@@ -1,8 +1,6 @@
 import { load } from 'js-yaml';
+import { LoadConfigHandleOption, LoadConfigHandlerBase } from 'lite-ts-config';
 import { File } from 'lite-ts-fs';
-
-import { LoadConfigHandleOption } from './load-handle-option';
-import { LoadConfigHandlerBase } from './load-handler-base';
 
 export class JsYamlConfigLoadHander extends LoadConfigHandlerBase {
 
@@ -20,8 +18,8 @@ export class JsYamlConfigLoadHander extends LoadConfigHandlerBase {
             this.m_Doc = load(yml);
         }
 
-        if (this.m_Doc[opt.key])
-            opt.res = this.m_Doc[opt.key];
+        if (this.m_Doc[opt.name])
+            opt.res = this.m_Doc[opt.name];
         else
             await this.next?.handle(opt);
     }
