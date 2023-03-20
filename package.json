@@ -8,6 +8,9 @@
     "@types/js-yaml": "^4.0.1",
     "@types/mocha": "^10.0.1",
     "@types/node": "^18.11.18",
+    "lite-ts-config": "^1.1.1",
+    "lite-ts-fs": "^1.6.1",
+    "lite-ts-mock": "^1.1.0",
     "terser-webpack-plugin": "^5.3.6",
     "ts-loader": "^9.4.2",
     "ts-node": "^10.9.1",
@@ -33,12 +36,6 @@
     "release": "npm run build && npm publish && npm config delete https-proxy && npm config set registry=https://registry.npm.taobao.org",
     "test": "mocha -t 30s -r ./node_modules/ts-node/register/index.js --exit",
     "jspack": "webpack build && ts-node sh/jspack"
-  },
-  "dependencies": {
-    "js-yaml": "^4.1.0",
-    "lite-ts-config": "^1.1.1",
-    "lite-ts-fs": "^1.6.1",
-    "lite-ts-mock": "^1.1.0"
   },
   "version": "1.0.1"
 }
