@@ -34,10 +34,11 @@
     "test": "mocha -t 30s -r ./node_modules/ts-node/register/index.js --exit",
     "jspack": "webpack build && ts-node sh/jspack"
   },
-  "version": "1.0.0",
   "dependencies": {
     "js-yaml": "^4.1.0",
+    "lite-ts-config": "^1.1.1",
     "lite-ts-fs": "^1.6.1",
     "lite-ts-mock": "^1.1.0"
-  }
+  },
+  "version": "1.0.1"
 }

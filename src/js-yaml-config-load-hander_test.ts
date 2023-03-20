@@ -1,10 +1,9 @@
 import { deepStrictEqual } from 'assert';
+import { LoadConfigHandleOption, LoadConfigHandlerBase } from 'lite-ts-config';
 import { File } from 'lite-ts-fs';
 import { Mock } from 'lite-ts-mock';
 
 import { JsYamlConfigLoadHander as Self } from './js-yaml-config-load-hander';
-import { LoadConfigHandleOption } from './load-handle-option';
-import { LoadConfigHandlerBase } from './load-handler-base';
 
 describe('src/js-yaml-config-load-hander.ts', () => {
     describe('.handle(opt: LoadConfigHandleOption)', () => {
@@ -19,7 +18,7 @@ describe('src/js-yaml-config-load-hander.ts', () => {
             );
 
             const opt: LoadConfigHandleOption = {
-                key: 'Test',
+                name: 'Test',
                 res: {}
             }
             await self.handle(opt);
@@ -41,7 +40,7 @@ describe('src/js-yaml-config-load-hander.ts', () => {
             Reflect.set(self, 'm_Doc', {});
 
             const opt: LoadConfigHandleOption = {
-                key: 'Test',
+                name: 'Test',
                 res: {}
             }
             const mockHandler = new Mock<LoadConfigHandlerBase>();
