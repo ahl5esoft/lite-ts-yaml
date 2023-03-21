@@ -3,7 +3,7 @@ import { LoadConfigHandleOption, LoadConfigHandlerBase } from 'lite-ts-config';
 import { File } from 'lite-ts-fs';
 import { Mock } from 'lite-ts-mock';
 
-import { JsYamlConfigLoadHander as Self } from './js-yaml-config-load-hander';
+import { JsYamlLoadConfigHander as Self } from './js-yaml-load-config-hander';
 
 describe('src/js-yaml-config-load-hander.ts', () => {
     describe('.handle(opt: LoadConfigHandleOption)', () => {
