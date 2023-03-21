@@ -25,7 +25,7 @@
     "yaml"
   ],
   "license": "GPL-3.0",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "name": "lite-ts-yaml",
   "repository": {
     "type": "git",
