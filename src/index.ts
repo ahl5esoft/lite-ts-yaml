@@ -1,1 +1,1 @@
-export * from './js-yaml-load-config-hander';
+export * from './load-config-hander';

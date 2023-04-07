@@ -1,13 +1,12 @@
 import { load } from 'js-yaml';
 import { LoadConfigHandleOption, LoadConfigHandlerBase } from 'lite-ts-config';
-import { File } from 'lite-ts-fs';
+import { IFile } from 'lite-ts-fs';
 
 export class JsYamlLoadConfigHander extends LoadConfigHandlerBase {
-
     private m_Doc: any;
 
     public constructor(
-        private m_File: File,
+        private m_File: IFile,
     ) {
         super();
     }

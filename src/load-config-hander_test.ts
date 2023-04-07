@@ -1,14 +1,14 @@
 import { deepStrictEqual } from 'assert';
 import { LoadConfigHandleOption, LoadConfigHandlerBase } from 'lite-ts-config';
-import { File } from 'lite-ts-fs';
+import { IFile } from 'lite-ts-fs';
 import { Mock } from 'lite-ts-mock';
 
-import { JsYamlLoadConfigHander as Self } from './js-yaml-load-config-hander';
+import { JsYamlLoadConfigHander as Self } from './load-config-hander';
 
 describe('src/js-yaml-config-load-hander.ts', () => {
     describe('.handle(opt: LoadConfigHandleOption)', () => {
         it('延迟加载', async () => {
-            const mockFile = new Mock<File>();
+            const mockFile = new Mock<IFile>();
             const self = new Self(mockFile.actual);
 
             mockFile.expectReturn(
