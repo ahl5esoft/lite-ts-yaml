@@ -4,8 +4,8 @@
     "url": "https://github.com/ahl5esoft/lite-ts-yaml/issues"
   },
   "dependencies": {
-    "lite-ts-config": "^1.1.1",
-    "lite-ts-fs": "^1.6.1"
+    "lite-ts-config": "^2.1.1",
+    "lite-ts-fs": "^1.11.6"
   },
   "description": "yaml扩展",
   "devDependencies": {

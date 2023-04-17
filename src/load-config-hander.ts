@@ -1,8 +1,8 @@
 import { load } from 'js-yaml';
-import { LoadConfigHandleOption, LoadConfigHandlerBase } from 'lite-ts-config';
+import { ConfigLoadHandlerBase, ConfigLoadHandlerContext } from 'lite-ts-config';
 import { IFile } from 'lite-ts-fs';
 
-export class JsYamlLoadConfigHander extends LoadConfigHandlerBase {
+export class JsYamlLoadConfigHander extends ConfigLoadHandlerBase {
     private m_Doc: any;
 
     public constructor(
@@ -11,7 +11,7 @@ export class JsYamlLoadConfigHander extends LoadConfigHandlerBase {
         super();
     }
 
-    public async handle(opt: LoadConfigHandleOption) {
+    public async handle(opt: ConfigLoadHandlerContext) {
         if (!this.m_Doc) {
             const yml = await this.m_File.readString();
             this.m_Doc = load(yml);
