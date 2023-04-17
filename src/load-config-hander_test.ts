@@ -6,7 +6,7 @@ import { Mock } from 'lite-ts-mock';
 import { JsYamlLoadConfigHander as Self } from './load-config-hander';
 
 describe('src/js-yaml-config-load-hander.ts', () => {
-    describe('.handle(opt: LoadConfigHandleOption)', () => {
+    describe('.handle(ctx: ConfigLoadHandlerContext)', () => {
         it('延迟加载', async () => {
             const mockFile = new Mock<IFile>();
             const self = new Self(mockFile.actual);

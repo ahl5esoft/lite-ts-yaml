@@ -11,15 +11,15 @@ export class JsYamlLoadConfigHander extends ConfigLoadHandlerBase {
         super();
     }
 
-    public async handle(opt: ConfigLoadHandlerContext) {
+    public async handle(ctx: ConfigLoadHandlerContext) {
         if (!this.m_Doc) {
             const yml = await this.m_File.readString();
             this.m_Doc = load(yml);
         }
 
-        if (this.m_Doc[opt.name])
-            opt.res = this.m_Doc[opt.name];
+        if (this.m_Doc[ctx.name])
+            ctx.res = this.m_Doc[ctx.name];
         else
-            await this.next?.handle(opt);
+            await this.next?.handle(ctx);
     }
 }
