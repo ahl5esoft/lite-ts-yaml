@@ -1,1 +1,1 @@
-export * from './load-config-hander';
+export * from './config-load-hander';

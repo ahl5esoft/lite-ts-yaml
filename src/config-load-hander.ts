@@ -2,7 +2,7 @@ import { load } from 'js-yaml';
 import { ConfigLoadHandlerBase, ConfigLoadHandlerContext } from 'lite-ts-config';
 import { IFile } from 'lite-ts-fs';
 
-export class JsYamlLoadConfigHander extends ConfigLoadHandlerBase {
+export class JsYamlConfigLoadHander extends ConfigLoadHandlerBase {
     private m_Doc: any;
 
     public constructor(

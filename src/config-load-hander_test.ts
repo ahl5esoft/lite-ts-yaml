@@ -3,7 +3,7 @@ import { ConfigLoadHandlerBase, ConfigLoadHandlerContext } from 'lite-ts-config'
 import { IFile } from 'lite-ts-fs';
 import { Mock } from 'lite-ts-mock';
 
-import { JsYamlLoadConfigHander as Self } from './load-config-hander';
+import { JsYamlConfigLoadHander as Self } from './config-load-hander';
 
 describe('src/js-yaml-config-load-hander.ts', () => {
     describe('.handle(ctx: ConfigLoadHandlerContext)', () => {
